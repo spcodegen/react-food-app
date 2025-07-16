@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Nav />
       <Search foodData={foodData} setFoodData={setFoodData} />
-      <FoodList foodData={foodData} />
+      {/* <FoodList foodData={foodData} /> */}
     </div>
   );
 }
