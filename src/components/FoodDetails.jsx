@@ -46,6 +46,22 @@ function FoodDetails({ foodId }) {
           </span>
         </div>
       </div>
+      <h2>Ingredients</h2>
+      {food.extendedIngredients.map((item) => (
+        <div>
+          <img
+            src={
+              `https://img.spoonacular.com/ingredients_100x100/` + item.image
+            }
+            alt=""
+          />
+          <h3>{item.name}</h3>
+          <h3>
+            {item.amount} {item.unit}
+          </h3>
+        </div>
+      ))}
+
       <h2>Instructions</h2>
       <div className={styles.recipeInstructions}>
         <ol>
