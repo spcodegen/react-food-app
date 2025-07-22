@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./Item.JSX";
 
 function ItemList({ food, isLoading }) {
   return (
@@ -6,20 +7,7 @@ function ItemList({ food, isLoading }) {
       {isLoading ? (
         <p>Loading....</p>
       ) : (
-        food.extendedIngredients.map((item) => (
-          <div>
-            <img
-              src={
-                `https://img.spoonacular.com/ingredients_100x100/` + item.image
-              }
-              alt={item.name}
-            />
-            <h3>{item.name}</h3>
-            <h3>
-              {item.amount} {item.unit}
-            </h3>
-          </div>
-        ))
+        food.extendedIngredients.map((item) => <Item item={item} />)
       )}
     </div>
   );
